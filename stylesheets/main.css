@@ -1,0 +1,108 @@
+#addInteractionPanel {
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+#addInteractionPanel button{
+  float: right;
+  margin-top: 10px;
+}
+
+body {
+  font: 12px helvetica;
+  margin: 0;
+}
+
+.box {
+  background-color:rgba(240,240,240,0.85);
+  border: 1px solid #ccc;
+  color: #333;
+  margin: 0 auto;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.box hr {
+  background-color: #888;
+  border: 0;
+  color: #333;
+  height: 1px;
+}
+
+.box .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.clear {
+  clear: both;
+}
+
+#control-bar {
+  left: 10px;
+}
+
+#display-bar {
+  display: none;
+  right: 10px;
+  width: 300px;
+}
+
+.interaction {
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.interaction .side {
+  float: right;
+  padding: 10px 0px 10px 0px;
+  width: 80px;
+  text-align: right;
+}
+
+.interaction .content {
+  float: left;
+  padding: 10px 0px 10px 0px;
+  width: 200px;
+}
+
+.interaction .title {
+  float: left;
+  font-size: 12px;
+  padding: 15px 0px 10px 0px;
+  width: 150px;
+}
+
+.interaction .regexInput {
+  width: 200px;
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+
+.textInput {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+
+.TOC .col {
+  margin-top: 10px;
+  width: 150px;
+  float: left;
+}
+
+.TOC .col a.TOCitem {
+  color: #366F9E;
+  display: block;
+  padding: 6px;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.TOC .col a.TOCitem:hover {
+  cursor: pointer;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+}
