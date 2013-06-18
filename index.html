@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Network Visualization</title>
+<link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+<link rel="stylesheet" href="stylesheets/jslider.css" type="text/css">
+<link rel="stylesheet" href="stylesheets/jslider.round.plastic.css"
+type="text/css">
+
+<script type="text/javascript" src="js/protovis.js"></script>
+<script type="text/javascript" src="data/testData.js"></script>
+<script type="text/javascript" src="js/nv.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.dependClass.js"></script>
+<script type="text/javascript" src="js/jquery.slider.js"></script>
+</head>
+
+<body>
+
+<div id="control-bar" class="box">
+  <span style="display:inline-block; width: 70px">Show only: </span>
+  <button id="showOnlyMetros" onClick = "nv.visControl.setCurrentLayer('metro');
+    nv.visControl.renderLinks();nv.vis.render();">Metros</button>
+  <button id="showOnlyPops" onClick = "nv.visControl.setCurrentLayer('pop');
+    nv.visControl.renderLinks(); nv.vis.render();">Pops</button>
+  <button id="showOnlyRouters"
+    onClick = "nv.visControl.setCurrentLayer('router');
+    nv.visControl.renderLinks(); nv.vis.render();">Routers</button><br/>
+  <span style="display:inline-block; width: 70px">Share: </span>
+  <button id="shareURLButton">URL</button>
+  <input type="text" id="shareURLTextBox" class="textInput"
+  style="display:none"/>
+
+  <div id="interaction-container">
+    <div class="interaction">
+      <div class="title">Router Link Utilization</div>
+      <div class="content" style="padding-top:20px">
+        <input id="utilFilter" type="slider" value="0;10">
+      </div>
+      <div class="side">
+        <!--<button id="close_utilFilter">Remove</button>-->
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="interaction">
+      <div class="title">Router Link Capacity</div>
+      <div class="content" style="padding-top:20px">
+        <input id="capFilter" type="slider" name="price" value="0;10">
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="interaction">
+      <div class="title">Router Hostname</div>
+      <div class="content">
+        <input id="routerNameFilter" type="text"
+            value="Enter a regular expression" class="regexInput" />
+        <input type="checkbox" id="includeNeighbors_checkbox" />
+            Include neighbors
+      </div>
+      <div class="side">
+        <!--<button id="close_routerNameFilter">Remove</button>-->
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<!--
+  <div id="addInteractionPanel">
+    <div class="TOC" id="filtersTOC">
+      <div class="col">
+        <a class="TOCitem">Router Link Capacity</a>
+        <a class="TOCitem">Router Link Utilization</a>
+      </div>
+      <div class="col">
+        <a class="TOCitem">Router Host Name</a>
+        <a class="TOCitem">Metro Name</a>
+      </div>
+      <div class="col">
+        <a class="TOCitem">Router # of LSPs Thru</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <button id="addDisplayButton">Add Display Layer</button>
+    <button id="addFilterButton">Add Filter</button>
+  </div>
+</div>
+-->
+<div id="display-bar" class="box">
+  <div id="display-name" class="title"></div>
+  <hr/>
+  <div id="display-info">
+  </div>
+</div>
+</body>
+</html>
